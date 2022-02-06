@@ -1,4 +1,4 @@
-package d03_02_2022;
+package d03_02;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

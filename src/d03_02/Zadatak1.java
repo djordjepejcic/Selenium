@@ -1,4 +1,4 @@
-package d03_02_2022;
+package d03_02;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
