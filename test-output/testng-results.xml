@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19183" started-at="2022-02-10T14:59:42 CET" finished-at="2022-02-10T15:00:01 CET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19183" started-at="2022-02-10T14:59:42 CET" finished-at="2022-02-10T15:00:01 CET">
+      <class name="d07_02_Tests.KatalonTest">
+        <test-method status="PASS" signature="before()[pri:0, instance:d07_02_Tests.KatalonTest@63440df3]" name="before" is-config="true" duration-ms="2936" started-at="2022-02-10T14:59:42 CET" finished-at="2022-02-10T14:59:45 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="AddRemoveProductsCart()[pri:0, instance:d07_02_Tests.KatalonTest@63440df3]" name="AddRemoveProductsCart" duration-ms="15560" started-at="2022-02-10T14:59:45 CET" finished-at="2022-02-10T15:00:00 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddRemoveProductsCart -->
+        <test-method status="PASS" signature="closeAll()[pri:0, instance:d07_02_Tests.KatalonTest@63440df3]" name="closeAll" is-config="true" duration-ms="649" started-at="2022-02-10T15:00:00 CET" finished-at="2022-02-10T15:00:01 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAll -->
+      </class> <!-- d07_02_Tests.KatalonTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

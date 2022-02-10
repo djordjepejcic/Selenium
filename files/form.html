@@ -1,0 +1,130 @@
+<html><head>
+    <title>Demo AUT</title>
+    <link rel="stylesheet" type="text/css" href="https://katalon-test.s3.amazonaws.com/aut/css/main-4e22073f62.css">
+    <style>
+        .poruka {
+            font-size: 20px;
+            padding: 20px;
+            width: 100%;
+            background: chartreuse;
+        }
+        </style>
+  </head>
+  <body>
+    <div class="wrapper">
+     
+      <div class="form-container">
+        <div class="message-wrapper" style="visibility: hidden;"><div class="message-element poruka">Uspesno ste sacuvali podatke!</div></div>
+        <div>
+          <div class="form-group">
+            <label for="first-name" class="control-label col-sm-2">Full name <span class="input-required"></span></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="first-name" name="firstName">
+            </div>
+          </div>
+    
+          </div>
+          <div class="form-group">
+            <label for="gender" class="control-label col-sm-2">Gender</label>
+            <div class="radio-container col-sm-10">
+              <div>
+                <label class="radio-inline"><input type="radio" name="gender" value="male">Male</label>
+                <label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
+                <label class="radio-inline"><input type="radio" name="gender" value="middle">In Between</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="dob" class="control-label col-sm-2">Date of birth</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="dob" name="dob">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="control-label col-sm-2">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="role" class="control-label col-sm-2">Role</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="role" id="role">
+                <option value></option>
+                <option value="Developer">Developer</option>
+                <option value="QA">QA</option>
+                <option value="Manager">Manager</option>
+                <option value="Technical Architect">Technical Architect</option>
+                <option value="Business Analyst">Business Analyst</option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="control-label col-sm-2">Ways of development</label>
+            <div class="col-sm-10 development-ways">
+              <div class="checkbox">
+                <label><input type="checkbox" value="read_books">Read books</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="online_courses">Take online courses</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="opensource">Contribute to opensource
+                  projects</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="tech_cons">Join tech cons</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="tech_blogs">Read tech blogs</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="via_delivery">Via discovery and
+                  experiment</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment" class="control-label col-sm-2">Comment</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button class="btn btn-primary" id="submit" onclick="submit()">
+                Submit
+              </button>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script>
+        function submit(params) {
+            document.querySelector('#submit').disabled= "true";
+
+            var mw = document.querySelector('.message-element')
+            mw.setAttribute('style', 'visibility: visible');
+            setTimeout(function() {
+                mw.setAttribute('style', 'visibility: hidden');
+                document.querySelectorAll('input').forEach(x => {
+                    x.value = ''
+                    x.checked = false;
+                })
+                document.querySelector('textarea').value = ''
+                document.querySelector('select').value = ''
+               
+            }, 4000)
+
+            setTimeout(function () {
+              var el = document.querySelector('#submit')
+              el.removeAttribute('disabled')
+            }, 5000)
+        }
+    </script>
+  
+
+</body></html>
